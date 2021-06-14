@@ -1,6 +1,6 @@
 comandos
-testa
-docker run -t -d -p 5050:5050 --name samplerunning sampleapp
+testar flask
+docker run -t --rm -d -p 5050:5050 --name samplerunning sampleapp
 
 git config --global init.defaultBranch main
 git init  
@@ -11,6 +11,11 @@ git commit -m "refazendo essa porra"
 git config pull.rebase true
 git pull origin main --allow-unrelated-histories
 git ls-tree -r main --name-only
+git add
+git commit -m "update"
+git push origin main
+
+
 
 
 
