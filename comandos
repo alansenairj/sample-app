@@ -1,0 +1,16 @@
+comandos
+testa
+docker run -t -d -p 5050:5050 --name samplerunning sampleapp
+
+git config --global init.defaultBranch main
+git init  
+git remote add origin https://github.com/alansenairj/sample-app.git
+git add .
+git commit -m "refazendo essa porra"
+
+git config pull.rebase true
+git pull origin main  
+
+
+docker run --rm -u root -p 8080:8080 -v jenkins-data:/var/jenkins_home -v $(which docker):/usr/bin/docker -v /var/run/docker.sock:/var/run/docker.sock -v
+"$HOME":/home --name jenkins_server jenkins/jenkins:jdk11
